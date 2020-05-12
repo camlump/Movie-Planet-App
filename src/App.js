@@ -1,40 +1,48 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import MovieRow from './components/MovieRow.jsx'
+import $ from 'jquery'
 
 class App extends Component {
   constructor(props){
     super(props)
+    this.state = {}
     console.log('This is my initializer')
 
-    const movies = [
-      {id: 0, title: 'Avangers', overview: 'First movie on the list avengers'},
-      {id: 2, title: 'Iron Man', overview: 'Second movie on the list avengers'}
-    ]
-    const movieRows= []
+    // const movies = [
+    //   {id: 0, title: 'Avengers', poster_src: 'https://images-na.ssl-images-amazon.com/images/I/A1t8xCe9jwL._AC_SL1500_.jpg', overview: 'First movie on the list avengers'},
+    //   {id: 2, title: 'Black Panther', poster_src: 'https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg', overview: 'Second movie on the list avengers'}
+    // ]
+    // const movieRows= []
 
-    movies.forEach((movie)=>{
-      console.log(movie.title)
-      const movieRow = <table>
-        <tbody>
-          <tr>
-            <td>
-              <img alt="poster" src=""/>
- 
-            </td>
-            <td>
-              {movie.title}
-            </td>
-          </tr>
-        </tbody>
+    // movies.forEach((movie)=>{
+    //   console.log(<MovieRow />)
+    //   const movieRow = <MovieRow movie={movie}/>
+      
+    //   movieRows.push(movieRow)
+    // })
 
-      </table>
-      movieRows.push(movieRow)
-    })
+    // this.state = {rows: movieRows}
 
-    this.state = {rows: movieRows}
+    this.performSearch()
   }
 
+  performSearch(){
+    console.log("peform search using moviedb")
+    const urlString = ""
+    $.ajax({
+      url: urlString,
+      success: (searchResults) => {
+        console.log("Fetched data successfully")
+      },
+      error: (xhr, status, err) => {
+        console.error("Failed to fetch data")
+      }
+
+    })
+
+  }
   render(){
     return (
       <div className="App">
