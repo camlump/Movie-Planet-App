@@ -11,12 +11,28 @@ class App extends Component {
       {id: 0, title: 'Avangers', overview: 'First movie on the list avengers'},
       {id: 2, title: 'Iron Man', overview: 'Second movie on the list avengers'}
     ]
+    const movieRows= []
 
     movies.forEach((movie)=>{
       console.log(movie.title)
+      const movieRow = <table>
+        <tbody>
+          <tr>
+            <td>
+              <img alt="poster" src=""/>
+ 
+            </td>
+            <td>
+              {movie.title}
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+      movieRows.push(movieRow)
     })
 
-    this.state = {rows: <p>this is my row</p>}
+    this.state = {rows: movieRows}
   }
 
   render(){
