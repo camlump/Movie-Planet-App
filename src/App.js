@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {}
-    console.log('This is my initializer')
+    // console.log('This is my initializer')
 
     // const movies = [
     //   {id: 0, title: 'Avengers', poster_src: 'https://images-na.ssl-images-amazon.com/images/I/A1t8xCe9jwL._AC_SL1500_.jpg', overview: 'First movie on the list avengers'},
@@ -30,11 +30,12 @@ class App extends Component {
 
   performSearch(){
     console.log("peform search using moviedb")
-    const urlString = ""
+    const urlString = "https://api.themoviedb.org/3/search/movie?api_key=2009fdebc0560f2e920e83972fae2525&language=en-US&page=1&include_adult=false"
     $.ajax({
       url: urlString,
       success: (searchResults) => {
         console.log("Fetched data successfully")
+        console.log(searchResults)
       },
       error: (xhr, status, err) => {
         console.error("Failed to fetch data")
