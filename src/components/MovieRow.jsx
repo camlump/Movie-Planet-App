@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
 
 export default class MovieRow extends Component {
+    viewMovie(){
+        // console.log("trying to view movie")
+        // console.log(this.props.movie.title)
+        const url = "https://www.themoviedb.org./movie/" + this.props.movie.id
+        window.location.href = url
+    }
     render() {
         return (
             <table key={this.props.movie.id}>
@@ -11,8 +17,9 @@ export default class MovieRow extends Component {
      
                 </td>
                 <td>
-                  {this.props.movie.title}
+                  <h3>{this.props.movie.title}</h3>
                 <p>{this.props.movie.overview}</p>
+                <input type="button" onClick={this.viewMovie.bind(this)} value="view"/>
                 </td>
               </tr>
             </tbody>
