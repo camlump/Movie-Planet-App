@@ -1,8 +1,28 @@
+.body{
+  background-color: #111;
+}
+
 .titleBar {
-  background-color: #000;
+  background-color: #111;
   display: block;
   color: #fff;
   padding-left: 16px;
+}
+
+/* .posterImg{
+  border: solid 1px white;
+  border-radius: 10px;
+  
+} */
+
+p{
+  text-align: left;
+}
+
+table{
+  background-color: #111;
+  color: white;
+  text-align: center;
 }
 
 

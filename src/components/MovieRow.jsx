@@ -13,13 +13,13 @@ export default class MovieRow extends Component {
             <tbody>
               <tr>
                 <td>
-                  <img alt="poster" width="90" src={this.props.movie.poster_src}/>
+                  <img className="posterImg" alt="poster" width="90" src={this.props.movie.poster_src}/>
      
                 </td>
                 <td>
                   <h3>{this.props.movie.title}</h3>
                 <p>{this.props.movie.overview}</p>
-                <input type="button" onClick={this.viewMovie.bind(this)} value="view"/>
+                <input type="button" onClick={this.viewMovie.bind(this)} value="view" target="blank"/>
                 </td>
               </tr>
             </tbody>
