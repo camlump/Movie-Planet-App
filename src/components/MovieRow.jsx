@@ -19,7 +19,7 @@ export default class MovieRow extends Component {
                 <td>
                   <h3 className="movieTitle">{this.props.movie.title}</h3>
                 <p>{this.props.movie.overview}</p>
-                <input type="button" onClick={this.viewMovie.bind(this)} value="view" target="blank"/>
+                <input className="viewbutton" type="button" onClick={this.viewMovie.bind(this)} value="view" target="blank"/>
                 </td>
               </tr>
             </tbody>
